@@ -1,4 +1,6 @@
 # aliyun-java-sdk-core
+[![Build Status](https://dev.azure.com/lingyuntech/aliyun-java-sdk-core/_apis/build/status/lihangqi.aliyun-java-sdk-core?branchName=master)](https://dev.azure.com/lingyuntech/aliyun-java-sdk-core/_build/latest?definitionId=5&branchName=master)
+
 SDK核心库
 
 Maven依赖：[Maven Repository](https://mvnrepository.com/artifact/com.aliyun/aliyun-java-sdk-core)
