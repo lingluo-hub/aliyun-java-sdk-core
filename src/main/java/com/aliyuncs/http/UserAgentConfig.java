@@ -3,7 +3,12 @@ package com.aliyuncs.http;
 import com.aliyuncs.utils.StringUtils;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 public class UserAgentConfig {
 
@@ -12,12 +17,11 @@ public class UserAgentConfig {
         try {
             props.load(UserAgentConfig.class.getClassLoader().getResourceAsStream("project.properties"));
         } catch (IOException e) {
-            props.setProperty("project.version","(got version failed)");
-            props.setProperty("project.name","Core");
+            props.setProperty("sdk.project.version","(got version failed)");
         }
         DEFAULT_MESSAGE = String.format("AlibabaCloud (%s; %s) Java/%s %s/%s",
-                props.getProperty("os.name"), props.getProperty("os.arch"), props.getProperty("java.runtime.version"),
-                props.getProperty("project.name"), props.getProperty("project.version"));
+                props.getProperty("os.name"), props.getProperty("os.arch"), props.getProperty("java.runtime.version"),"Core",
+                props.getProperty("sdk.project.version"));
     }
 
     private static String DEFAULT_MESSAGE;
