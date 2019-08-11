@@ -34,6 +34,10 @@ public abstract class AcsRequest<T extends AcsResponse> extends HttpRequest {
     private String endpointType;
     private ProductDomain productDomain = null;
     protected String strToSign;
+    public HashMap<String, String> productEndpointMap = null;
+    public String productEndpointRegional = null;
+    public String productNetwork = "public";
+    public String productSuffix = "";
 
     public AcsRequest(String product) {
         super(null);
@@ -238,7 +242,7 @@ public abstract class AcsRequest<T extends AcsResponse> extends HttpRequest {
     }
 
     protected void setParameter(Map<String, String> map, String name, Object value) {
-        if (null == map || null == name || null == value) {
+        if (null == map) {
             return;
         }
         map.put(name, String.valueOf(value));

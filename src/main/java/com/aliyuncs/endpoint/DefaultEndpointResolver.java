@@ -19,6 +19,7 @@ public class DefaultEndpointResolver implements EndpointResolver {
             String userConfig,
             IClientProfile profile) {
         userCustomizedEndpointResolver = new UserCustomizedEndpointResolver();
+        EndpointResolverRules endpointResolverRules = new EndpointResolverRules();
         List<EndpointResolverBase> resolverChain = new ArrayList<EndpointResolverBase>();
 
         // The order is very IMPORTANT!
@@ -27,6 +28,7 @@ public class DefaultEndpointResolver implements EndpointResolver {
         if (profile.isUsingVpcEndpoint()) {
             resolverChain.add(new UserVpcEndpointResolver());
         }
+        resolverChain.add(endpointResolverRules);
         if (userConfig == null) {
             resolverChain.add(new LocalConfigRegionalEndpointResolver());
             resolverChain.add(new LocalConfigGlobalEndpointResolver());

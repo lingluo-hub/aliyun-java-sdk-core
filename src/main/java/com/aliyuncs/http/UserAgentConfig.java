@@ -1,7 +1,5 @@
 package com.aliyuncs.http;
 
-import com.aliyuncs.utils.StringUtils;
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
+import com.aliyuncs.utils.StringUtils;
+
 public class UserAgentConfig {
 
     static {
@@ -17,11 +17,11 @@ public class UserAgentConfig {
         try {
             props.load(UserAgentConfig.class.getClassLoader().getResourceAsStream("project.properties"));
         } catch (IOException e) {
-            props.setProperty("sdk.project.version","(got version failed)");
+            props.setProperty("sdk.project.version", "(got version failed)");
         }
-        DEFAULT_MESSAGE = String.format("AlibabaCloud (%s; %s) Java/%s %s/%s",
-                props.getProperty("os.name"), props.getProperty("os.arch"), props.getProperty("java.runtime.version"),"Core",
-                props.getProperty("sdk.project.version"));
+        DEFAULT_MESSAGE = String.format("AlibabaCloud (%s; %s) Java/%s %s/%s", props.getProperty("os.name"), props
+                .getProperty("os.arch"), props.getProperty("java.runtime.version"), "Core", props.getProperty(
+                        "sdk.project.version"));
     }
 
     private static String DEFAULT_MESSAGE;
@@ -32,14 +32,16 @@ public class UserAgentConfig {
         excludeList.add("java");
         excludeList.add("Core");
     }
-    public static String getDefaultMessage(){
+
+    public static String getDefaultMessage() {
         return DEFAULT_MESSAGE;
     }
+
     public void append(String key, String value) {
         if (StringUtils.isEmpty(key) || StringUtils.isEmpty(value)) {
             return;
         }
-        if (excludeList.contains(key.toLowerCase())){
+        if (excludeList.contains(key.toLowerCase())) {
             return;
         }
         this.userAgents.put(key, value);
