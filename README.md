@@ -1,5 +1,8 @@
-# aliyun-java-sdk-core
-[![Build Status](https://dev.azure.com/lingyuntech/aliyun-java-sdk-core/_apis/build/status/lihangqi.aliyun-java-sdk-core?branchName=master)](https://dev.azure.com/lingyuntech/aliyun-java-sdk-core/_build/latest?definitionId=5&branchName=master)
+<h1 align="center">Aliyun Core SDK for Java</h1> 
+
+[![Build Status](https://travis-ci.com/lihangqi/aliyun-java-sdk-core.svg?branch=master)](https://travis-ci.com/lihangqi/aliyun-java-sdk-core)
+
+[![codecov](https://codecov.io/gh/lihangqi/aliyun-java-sdk-core/branch/master/graph/badge.svg)](https://codecov.io/gh/lihangqi/aliyun-java-sdk-core)
 
 SDK核心库
 
