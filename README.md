@@ -1,7 +1,6 @@
 <h1 align="center">Aliyun Core SDK for Java</h1> 
 
 [![Build Status](https://travis-ci.com/lihangqi/aliyun-java-sdk-core.svg?branch=master)](https://travis-ci.com/lihangqi/aliyun-java-sdk-core)
-
 [![codecov](https://codecov.io/gh/lihangqi/aliyun-java-sdk-core/branch/master/graph/badge.svg)](https://codecov.io/gh/lihangqi/aliyun-java-sdk-core)
 
 SDK核心库
