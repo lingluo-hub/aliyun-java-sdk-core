@@ -1,5 +1,5 @@
 *.settings/
-*/target/
+*target/
 */.classpath
 *.project/
 .project
@@ -11,3 +11,4 @@
 .DS_Store
 */lib/
 .factorypath
+.classpath
